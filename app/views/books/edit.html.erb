@@ -1,3 +1,21 @@
+<div class="flash">
+  <% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+  <% end %>
+</div>
+
+<% if @book.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
+     <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<%end%>
+
+
 <h1>Editing Book</h1>
 <%=form_with model: @book,url: update_book_path(@book.id),method: :patch do |f| %>
   <div class="field">
@@ -16,5 +34,5 @@
 <%end%>
 
 <%=link_to "Show", book_path(@book.id) %>
-|
-<%=link_to "back","/books" %>
+
+<%=link_to "back",books_path %>
