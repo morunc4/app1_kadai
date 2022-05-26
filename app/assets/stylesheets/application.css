@@ -13,11 +13,7 @@
  *= require_tree .
  *= require_self
  */
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-}
+
 
 body{
   background-color: #fff;
@@ -42,9 +38,30 @@ p,ol,ul,td{
 th{
   padding-bottom: 5px;
 }
+
+td{
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 div.field,div.actions{
   margin-bottom: 10px;
 }
 label{
   display: block;
+}
+
+.flash{
+  color: green;
+}
+a{
+  color: #000;
+}
+
+a:hover{
+  color:#fff;
+  background-color: #000;
+}
+a:visited{
+  color:#666;
 }
